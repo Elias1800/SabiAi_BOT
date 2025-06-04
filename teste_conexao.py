@@ -2,7 +2,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
 # APIs
-TOKEN_TELEGRAM= '7654266195:AAGYNmiIglcTHP_prxkf4VL46s3QqQLIOm0'
+TOKEN_TELEGRAM= ''
 TOKENN_GEMINI=''
 
 # Função que responde ao comando /start
@@ -10,7 +10,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(f"Olá, {update.effective_user.first_name}! Eu estou funcionando! 🤖")
 
 async def Eu(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("I LOVE YOU!<3")
+    await update.message.reply_text("Teste")
 
 
 # Inicializa o bot

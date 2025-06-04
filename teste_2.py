@@ -9,16 +9,12 @@ TOKENN_GEMINI='AIzaSyAc06fu1ntOt63CeA67hOrXpl5LDdIyWp8'
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(f"Olá, {update.effective_user.first_name}! Eu estou funcionando! 🤖")
 
-async def Eu(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("I LOVE YOU!<3")
-
 
 # Inicializa o bot
 if __name__ == '__main__':
     app = ApplicationBuilder().token(TOKEN_TELEGRAM).build()
 
     app.add_handler(CommandHandler("start", start))
-    app.add_handler(CommandHandler("Eu", Eu))
 
     print("Bot iniciado...")
     app.run_polling()
